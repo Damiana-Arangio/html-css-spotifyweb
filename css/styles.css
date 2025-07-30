@@ -1,0 +1,46 @@
+/****************************************************  VERSIONE DESKTOP  *************************************************************/
+
+/**********************
+    REGOLE GENERALI
+***********************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: ; */
+}
+
+body {
+    /* font-family: ; */
+    /* font-size: 1rem ; */
+
+}
+
+/***************************
+    CLASSI RIUTILIZZABILI
+***************************/
+
+/*************************
+    SEZIONI PRINCIPALI
+**************************/
+
+/*****************************************************  VERSIONE TABLET  ***************************************************************/
+
+/* todo VERSIONE TABLET */
+@media screen and (max-width: 878px) {}
+
+/**************************************************** VERSIONE SMARTPHONE *************************************************************/
+
+/* todo VERSIONE SMARTPHONE - S */
+@media screen and (max-width: 639px) {}
+
+/* todo VERSIONE SMARTPHONE - XS */
+@media screen and (max-width: 552px) {}
+
+/************************************************************ BONUS ********************************************************************/
+/* todo Media Query - Height Viewport ridotta  */
+@media screen and (max-height: 350px) {}
