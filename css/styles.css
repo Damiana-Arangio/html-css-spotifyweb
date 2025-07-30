@@ -18,7 +18,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-style: normal;    
     font-size: 1rem ;
-    /* overflow: hidden;                            */
+    /* overflow: hidden;                                   */
     /* Blocca scroll pagina */
 }
 
@@ -44,10 +44,12 @@ body {
 /** === PAGINA SUPERIORE SINISTRA === */
 #container-top-main-left {
     max-width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: 80%;
+
+    /* height: 100%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
 
     /*! Debug */
     background-color: rgb(255, 255, 255);
@@ -58,7 +60,7 @@ body {
 
     /*! Debug */
     background-color: blueviolet;
-    Flex-shrink: 0;
+    /* Flex-shrink: 0; */
 }
 
 #logo {
@@ -76,7 +78,7 @@ body {
 }
 
 #playlist {
-    height: 50vh;                                           /* todo testare/sistemare */
+    height: calc(50vh - 75px);                                          /* todo testare/sistemare */
     overflow: auto;
 
     /*! Debug  */
@@ -87,7 +89,11 @@ body {
 #profilo-utente {
 
     /*! Debug*/
-    height: 71px;
+    height: 70px;
+    position: fixed;
+    bottom: 90px;                   /* considera height main bottom */
+    /* height: 20vh; */
+    height: 70px;
     background-color: rgb(255, 213, 0);
 }
 
@@ -107,7 +113,10 @@ body {
 /** === PAGINA INFERIORE === */
 #container-bottom-main {
     height: 90px;
+    position: fixed;
+    bottom: 0;
     background-color: rgb(223, 143, 143);
+
 }
 
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
