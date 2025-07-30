@@ -15,10 +15,42 @@ html {
 }
 
 body {
-    /* font-family: ; */
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;    
     /* font-size: 1rem ; */
+}
+
+/*! CONTENITORI PAGINA */
+#container-top-main {
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+
+    /* Debug */
+    background-color: violet;
+}
+#container-top-main-left {
+    max-width: 40%;
+    height: 100%;
+    
+    /* Debug */
+    background-color: brown;
+}
+
+#container-top-main-right {
+    flex-grow: 1;
+    height: 100%;
+
+    /* Debug */
+    background-color: rgb(44, 165, 42);
 
 }
+
+#container-bottom-main{
+    height: 90px;
+    background-color: rgb(223, 143, 143);
+}
+
 
 /***************************
     CLASSI RIUTILIZZABILI
