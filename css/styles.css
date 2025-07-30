@@ -18,11 +18,20 @@ body {
     font-family: "Montserrat", sans-serif;
     font-style: normal;    
     font-size: 1rem ;
-    /* overflow: hidden;                                   */
-    /* Blocca scroll pagina */
+    font-weight: bold;
+    color: gray;
+    overflow: hidden;                                   /* Blocca scroll pagina */
 }
 
-/** === CONTENITORE PRINCIPALE PAGINA === */
+ul {
+    list-style-type: none;
+}
+
+h3 {
+    padding-bottom: 10px;
+}
+
+/** CONTENITORE PRINCIPALE PAGINA */
 #container-top-main {
     width: 100%;
     height: calc(100vh - 90px);
@@ -37,63 +46,106 @@ body {
     CLASSI RIUTILIZZABILI
 ***************************/
 
+/** COLORI TESTO */
+.text-white {
+    color: white;
+}
+
+/** SPAZIATURE */
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-right-10 {
+    padding-left: 10px;
+}
+
+.padding-left-14 {
+    padding-left: 14px;
+}
+
+
 /*************************
     SEZIONI PRINCIPALI
 **************************/
 
-/** === PAGINA SUPERIORE SINISTRA === */
+/** PAGINA SUPERIORE SINISTRA */
 #container-top-main-left {
-    max-width: 40%;
-    height: 80%;
-
-    /* height: 100%; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
+    width: 17%;
+    height: 100%;
 
     /*! Debug */
-    background-color: rgb(255, 255, 255);
-    
+    background-color: rgb(0, 0, 0);
 }
 
-.container-log-nav-playlist {
-
-    /*! Debug */
-    background-color: blueviolet;
-    /* Flex-shrink: 0; */
+/* Logo Spotify */
+.logo {
+    padding: 10px;
+    background-color: black;
 }
 
-#logo {
-
-    /*! Debug */
-    height: 48px;
-    background-color: aquamarine;
+#img-logo-big {
+    width: 100px;
 }
 
+#img-logo-small {
+    width: 30px;
+    display: none;
+}
+
+/* Navigazione pagina */
 #nav-page {
 
+    margin-bottom: 20px;
+
     /*! Debug  */
-    height: 86px;
+    /* height: 86px; */
     background-color: rgb(17, 80, 240);
 }
 
-#playlist {
-    height: calc(50vh - 75px);                                          /* todo testare/sistemare */
+#nav-page ul li, #playlist ul li {
+    height: 100%;
+    line-height: 100%;
+    padding-bottom: 10px;
+}
+
+.img-nav-page {
+    width: 35px;
+    vertical-align: middle;
+}
+
+#img-home {
+    border-left: 4px solid rgb(13, 255, 0);
+}
+
+
+/** PLAYLIST */
+#playlist {                                 
+    height: calc(50vh - 70px);              /* todo testare/sistemare */
     overflow: auto;
 
     /*! Debug  */
     background-color: rgb(231, 83, 83);
-
 }
 
-#profilo-utente {
+#img-playlist {
+    width: 50px;
+    vertical-align: middle;
+}
 
-    /*! Debug*/
+/** PROFILO UTENTE */
+
+#profilo-utente {
+    width: 17%;
     height: 70px;
+    
+
+
+    /* Position */
     position: fixed;
-    bottom: 90px;                   /* considera height main bottom */
-    /* height: 20vh; */
-    height: 70px;
+    bottom: 90px;                           /* Dal basso considera 90px occupati da container bottom main */
+
+    /*! Debug*/                            
     background-color: rgb(255, 213, 0);
 }
 
@@ -112,11 +164,15 @@ body {
 
 /** === PAGINA INFERIORE === */
 #container-bottom-main {
+    width: 100%;
     height: 90px;
+
+    /* Positiion */
     position: fixed;
     bottom: 0;
-    background-color: rgb(223, 143, 143);
 
+    /*! Debug */
+    background-color: rgb(223, 143, 143);
 }
 
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
@@ -127,13 +183,26 @@ body {
 /**************************************************** VERSIONE SMARTPHONE *************************************************************/
 
 /* todo VERSIONE SMARTPHONE - S */
-@media screen and (max-width: 639px) {}
+@media screen and (max-width: 639px) {
+
+
+}
 
 /* todo VERSIONE SMARTPHONE - XS */
-@media screen and (max-width: 552px) {}
+@media screen and (max-width: 552px) {
+
+    /** PAGINA SUPERIORE SINISTRA */
+    #img-logo-big, .text-nav-page {
+        display: none;      
+    }
+    
+    #img-logo-small {
+        display: block;
+    }
+
 
 /************************************************************ BONUS ********************************************************************/
 /* todo Media Query - Height Viewport ridotta  */
 @media screen and (max-height: 350px) {
-    /*? PROVARE: - Position + Z-index: 1 su container-bottom-main (così si vede sopra content-top-main)  - flex-shrink su logo se svolgo con Flex oppure height  */
+   
 }
