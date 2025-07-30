@@ -11,13 +11,14 @@
 }
 
 html {
-    /* font-size: ; */
+    font-size: 13px;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
     font-style: normal;    
-    /* font-size: 1rem ; */
+    font-size: 1rem ;
+    overflow: hidden;                           /* Blocca scroll pagina */
 }
 
 /*! CONTENITORI PAGINA */
@@ -27,7 +28,7 @@ body {
     display: flex;
 
     /* Debug */
-    background-color: violet;
+    background-color: rgb(241, 26, 241);
 }
 #container-top-main-left {
     max-width: 40%;
@@ -40,6 +41,7 @@ body {
 #container-top-main-right {
     flex-grow: 1;
     height: 100%;
+    overflow-y: auto;                           /* Abilita scroll in verticale */
 
     /* Debug */
     background-color: rgb(44, 165, 42);
