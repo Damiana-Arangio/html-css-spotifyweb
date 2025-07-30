@@ -18,39 +18,18 @@ body {
     font-family: "Montserrat", sans-serif;
     font-style: normal;    
     font-size: 1rem ;
-    overflow: hidden;                           /* Blocca scroll pagina */
+    /* overflow: hidden;                            */
+    /* Blocca scroll pagina */
 }
 
-/*! CONTENITORI PAGINA */
+/** === CONTENITORE PRINCIPALE PAGINA === */
 #container-top-main {
     width: 100%;
     height: calc(100vh - 90px);
     display: flex;
 
-    /* Debug */
+    /*! Debug */
     background-color: rgb(241, 26, 241);
-}
-#container-top-main-left {
-    max-width: 40%;
-    height: 100%;
-    
-    /* Debug */
-    background-color: brown;
-}
-
-#container-top-main-right {
-    flex-grow: 1;
-    height: 100%;
-    overflow-y: auto;                           /* Abilita scroll in verticale */
-
-    /* Debug */
-    background-color: rgb(44, 165, 42);
-
-}
-
-#container-bottom-main{
-    height: 90px;
-    background-color: rgb(223, 143, 143);
 }
 
 
@@ -61,6 +40,75 @@ body {
 /*************************
     SEZIONI PRINCIPALI
 **************************/
+
+/** === PAGINA SUPERIORE SINISTRA === */
+#container-top-main-left {
+    max-width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /*! Debug */
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.container-log-nav-playlist {
+
+    /*! Debug */
+    background-color: blueviolet;
+    Flex-shrink: 0;
+}
+
+#logo {
+
+    /*! Debug */
+    height: 48px;
+    background-color: aquamarine;
+}
+
+#nav-page {
+
+    /*! Debug  */
+    height: 86px;
+    background-color: rgb(17, 80, 240);
+}
+
+#playlist {
+    height: 50vh;                                           /* todo testare/sistemare */
+    overflow: auto;
+
+    /*! Debug  */
+    background-color: rgb(231, 83, 83);
+
+}
+
+#profilo-utente {
+
+    /*! Debug*/
+    height: 71px;
+    background-color: rgb(255, 213, 0);
+}
+
+
+
+/** === PAGINA SUPERIORE DESTRA  === */
+#container-top-main-right {
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;                   /* Abilita scroll in verticale */
+
+    /*! Debug */
+    background-color: rgb(44, 165, 42);
+
+}
+
+/** === PAGINA INFERIORE === */
+#container-bottom-main {
+    height: 90px;
+    background-color: rgb(223, 143, 143);
+}
 
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
 
@@ -77,4 +125,6 @@ body {
 
 /************************************************************ BONUS ********************************************************************/
 /* todo Media Query - Height Viewport ridotta  */
-@media screen and (max-height: 350px) {}
+@media screen and (max-height: 350px) {
+    /*? PROVARE: - Position + Z-index: 1 su container-bottom-main (così si vede sopra content-top-main)  - flex-shrink su logo se svolgo con Flex oppure height  */
+}
