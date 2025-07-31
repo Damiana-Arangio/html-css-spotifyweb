@@ -19,17 +19,25 @@ body {
     font-style: normal;    
     font-size: 1rem ;
     font-weight: bold;
-    color: gray;
+    color: white;
     overflow: hidden;                                   /* Blocca scroll pagina */
-}
-
-ul {
-    list-style-type: none;
 }
 
 h3 {
     padding-bottom: 10px;
+    padding-left: 15px;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+
+a:hover {
+    opacity: 1;
+}
+
 
 /** CONTENITORE PRINCIPALE PAGINA */
 #container-top-main {
@@ -46,46 +54,40 @@ h3 {
     CLASSI RIUTILIZZABILI
 ***************************/
 
-/** COLORI TESTO */
-.text-white {
-    color: white;
-}
-
-/** SPAZIATURE */
-.padding-left-10 {
-    padding-left: 10px;
-}
-
-.padding-right-10 {
-    padding-left: 10px;
-}
-
-.padding-left-14 {
-    padding-left: 14px;
-}
-
 
 /*************************
     SEZIONI PRINCIPALI
 **************************/
 
-/** PAGINA SUPERIORE SINISTRA */
+/** CONTAINER TOP MAIN LEFT */
 #container-top-main-left {
     width: 17%;
     height: 100%;
-
-    /*! Debug */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: rgb(0, 0, 0);
 }
 
-/* Logo Spotify */
+#container-top-main-left ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+#container-top-main-left li {
+    padding-bottom: 15px;
+}
+
+/* LOGO SPOTIFY */
 .logo {
-    padding: 10px;
-    background-color: black;
+    padding-left: 15px;
+    padding-top: 20px;
+    /* padding: 10px; */
+    /* background-color: black; */
 }
 
 #img-logo-big {
-    width: 100px;
+    width: 134px;
 }
 
 #img-logo-small {
@@ -94,9 +96,9 @@ h3 {
 }
 
 /* Navigazione pagina */
-#nav-page {
+#nav-app {
 
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 
     /*! Debug  */
     /* height: 86px; */
@@ -105,24 +107,25 @@ h3 {
 
 #nav-page ul li, #playlist ul li {
     height: 100%;
-    line-height: 100%;
-    padding-bottom: 10px;
+    line-height: 100%;    
 }
 
 .img-nav-page {
-    width: 35px;
+    width: 27px;
     vertical-align: middle;
 }
 
 #img-home {
-    border-left: 4px solid rgb(13, 255, 0);
+    /* todo Da sistemare*/
+    /* border-left: 4px solid rgb(13, 255, 0); */
 }
 
 
 /** PLAYLIST */
-#playlist {                                 
-    height: calc(50vh - 70px);              /* todo testare/sistemare */
-    overflow: auto;
+#playlist {
+    flex-grow: 1;                    
+    overflow-y: auto;
+    padding-bottom: 70px;                           /* Spazio riservato all’altezza del profilo utente (fixed) per evitare sovrapposizione */
 
     /*! Debug  */
     background-color: rgb(231, 83, 83);
@@ -143,7 +146,7 @@ h3 {
 
     /* Position */
     position: fixed;
-    bottom: 90px;                           /* Dal basso considera 90px occupati da container bottom main */
+    bottom: 90px;                                   /* Spazio riservato all’altezza del container bottom main (fixed) per evitare sovrapposizione */
 
     /*! Debug*/                            
     background-color: rgb(255, 213, 0);
@@ -155,7 +158,7 @@ h3 {
 #container-top-main-right {
     flex-grow: 1;
     height: 100%;
-    overflow-y: auto;                   /* Abilita scroll in verticale */
+    overflow-y: auto;
 
     /*! Debug */
     background-color: rgb(44, 165, 42);
@@ -191,15 +194,35 @@ h3 {
 /* todo VERSIONE SMARTPHONE - XS */
 @media screen and (max-width: 552px) {
 
-    /** PAGINA SUPERIORE SINISTRA */
-    #img-logo-big, .text-nav-page {
+
+    /*************************
+        SEZIONI PRINCIPALI
+    **************************/
+
+    /** CONTAINER TOP MAIN LEFT */
+    #container-top-main-left {
+        width: 10%;
+        align-items: center;
+    }
+
+    #container-top-main-left ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    #img-logo-big, .text-nav-app, #playlist {
         display: none;      
+    }
+    
+    .logo {
+        padding-left: 0;
     }
     
     #img-logo-small {
         display: block;
     }
-
+      
+}
 
 /************************************************************ BONUS ********************************************************************/
 /* todo Media Query - Height Viewport ridotta  */
