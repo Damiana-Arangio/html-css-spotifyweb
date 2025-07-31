@@ -34,10 +34,22 @@ a {
     opacity: 0.7;
 }
 
-a:hover {
+a:hover, .active {
     opacity: 1;
 }
 
+#nav-app {
+    position: relative;
+}
+
+a.active::before {
+    content: ' ';
+    background-color: rgb(13, 255, 0);
+    width: 4px;
+    height: 20%;
+    left: 0;
+    position: absolute;
+}
 
 /** CONTENITORE PRINCIPALE PAGINA */
 #container-top-main {
