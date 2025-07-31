@@ -4,62 +4,63 @@
     REGOLE GENERALI
 ***********************/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-html {
-    font-size: 13px;
-}
+    html {
+        font-size: 13px;
+    }
 
-body {
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;    
-    font-size: 1rem ;
-    font-weight: bold;
-    color: white;
-    overflow: hidden;                                   /* Blocca scroll pagina */
-}
+    body {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;    
+        font-size: 1rem ;
+        font-weight: bold;
+        color: white;
+        overflow: hidden;                                   /* Blocca scroll pagina */
+    }
 
-h3 {
-    padding-bottom: 10px;
-    padding-left: 15px;
-}
+    h3 {
+        padding-bottom: 10px;
+        padding-left: 15px;
+    }
 
-a {
-    text-decoration: none;
-    color: white;
-    opacity: 0.7;
-}
+    a {
+        text-decoration: none;
+        color: white;
+        opacity: 0.7;
+    }
 
-a:hover, .active {
-    opacity: 1;
-}
 
-#nav-app {
-    position: relative;
-}
+    a:hover, .active, #hr-user {
+        opacity: 1;
+    }
 
-#nav-app a.active::before {
-    content: ' ';
-    background-color: rgb(13, 255, 0);
-    width: 4px;
-    height: 20%;
-    left: 0;
-    position: absolute;
-}
+    #nav-app {
+        position: relative;
+    }
 
-/** CONTENITORE PRINCIPALE PAGINA */
-#container-top-main {
-    width: 100%;
-    height: calc(100vh - 90px);
-    display: flex;
+    #nav-app a.active::before {
+        content: ' ';
+        background-color: rgb(13, 255, 0);
+        width: 4px;
+        height: 20%;
+        position: absolute;
+        left: 0;
+    }
 
-    /*! Debug */
-    background-color: rgb(241, 26, 241);
-}
+    /** CONTENITORE PRINCIPALE PAGINA */
+        #container-top-main {
+            width: 100%;
+            height: calc(100vh - 90px);
+            display: flex;
+
+            /*! Debug */
+            background-color: rgb(241, 26, 241);
+        }
 
 
 /***************************
@@ -71,124 +72,136 @@ a:hover, .active {
     SEZIONI PRINCIPALI
 **************************/
 
-/** CONTAINER TOP MAIN LEFT */
-#container-top-main-left {
-    width: 17%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: rgb(0, 0, 0);
-}
+    /** CONTAINER TOP MAIN LEFT */
+        #container-top-main-left {
+            width: 17%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: rgb(0, 0, 0);
+        }
 
-#container-top-main-left ul {
-    list-style-type: none;
-    padding-left: 15px;
-}
+        #container-top-main-left ul {
+            list-style-type: none;
+            padding-left: 15px;
+        }
 
-#container-top-main-left li {
-    padding-bottom: 15px;
-}
+        #container-top-main-left li {
+            padding-bottom: 15px;
+        }
 
-/* LOGO SPOTIFY */
-.logo {
-    padding-left: 15px;
-    padding-top: 20px;
-    /* padding: 10px; */
-    /* background-color: black; */
-}
+    /** LOGO SPOTIFY */
+        .logo {
+            padding-left: 15px;
+            padding-top: 20px;
+        }
 
-#img-logo-big {
-    width: 134px;
-}
+        #img-logo-big {
+            width: 134px;
+        }
 
-#img-logo-small {
-    width: 30px;
-    display: none;
-}
+        #img-logo-small {
+            width: 30px;
+            display: none;
+        }
 
-/* Navigazione pagina */
-#nav-app {
+    /** NAVIGAZIONE APP */
 
-    /* margin-bottom: 20px; */
+        #nav-page ul li, #playlist ul li {
+            height: 100%;
+            line-height: 100%;    
+        }
 
-    /*! Debug  */
-    /* height: 86px; */
-    background-color: rgb(17, 80, 240);
-}
-
-#nav-page ul li, #playlist ul li {
-    height: 100%;
-    line-height: 100%;    
-}
-
-.img-nav-page {
-    width: 27px;
-    vertical-align: middle;
-}
-
-#img-home {
-    /* todo Da sistemare*/
-    /* border-left: 4px solid rgb(13, 255, 0); */
-}
+        .img-nav-app {
+            width: 27px;
+            vertical-align: middle;
+        }
 
 
-/** PLAYLIST */
-#playlist {
-    flex-grow: 1;                    
-    overflow-y: auto;
-    padding-bottom: 70px;                           /* Spazio riservato all’altezza del profilo utente (fixed) per evitare sovrapposizione */
+    /** PLAYLIST */
+        #playlist {
+            flex-grow: 1;                    
+            overflow-y: auto;
+            padding-bottom: 70px;                           /* Spazio riservato ad  height di "Download App + User (fixed)" per evitare sovrapposizione */
+        }
 
-    /*! Debug  */
-    background-color: rgb(231, 83, 83);
-}
+        #img-playlist {
+            width: 50px;
+            vertical-align: middle;
+        }
 
-#img-playlist {
-    width: 50px;
-    vertical-align: middle;
-}
+    /** DOWNLOAD APP + USER */
+        #download-user {
+            width: 17%;
+            height: 70px;
+            padding-left: 15px;
 
-/** PROFILO UTENTE */
+            
+            /* Position */
+            position: fixed;
+            bottom: 98px;                                   /* Spazio riservato ad height (90px) di container bottom main (fixed) per evitare sovrapposizionei + +8px extra per sollevare leggermente il blocco */
+        }
 
-#profilo-utente {
-    width: 17%;
-    height: 70px;
-    
+        #download-user > * {
+            margin-bottom: 10px;
+        }
+
+        #container-download-app, #container-user {
+            height: calc(70px/3); 
+            line-height: calc(70px/3);
+        }
+
+        /* Download App */
+            #circle-down {
+                padding-right: 5px;
+            }
+
+        /* separatore */
+            #hr-user {
+                width: 89%;
+                height: 3%;
+                color: white;
+                opacity: 0.7;
+                border-style: solid;
+            }
+
+        /* User */
+            #icon-user {
+                color: gray;
+                font-size: 2.0rem;
+                vertical-align: middle;
+                padding-right: 10px;
+            }
+
+            #name-user {
+                font-size: 1.3rem;
+            }
 
 
-    /* Position */
-    position: fixed;
-    bottom: 90px;                                   /* Spazio riservato all’altezza del container bottom main (fixed) per evitare sovrapposizione */
+    /** PAGINA SUPERIORE DESTRA */
+        #container-top-main-right {
+            flex-grow: 1;
+            height: 100%;
+            overflow-y: auto;
 
-    /*! Debug*/                            
-    background-color: rgb(255, 213, 0);
-}
+            /*! Debug */
+            background-color: rgb(44, 165, 42);
 
+        }
 
+    /** PAGINA INFERIORE */
+        #container-bottom-main {
+            width: 100%;
+            height: 90px;
 
-/** === PAGINA SUPERIORE DESTRA  === */
-#container-top-main-right {
-    flex-grow: 1;
-    height: 100%;
-    overflow-y: auto;
+            /* Positiion */
+            position: fixed;
+            bottom: 0;
 
-    /*! Debug */
-    background-color: rgb(44, 165, 42);
-
-}
-
-/** === PAGINA INFERIORE === */
-#container-bottom-main {
-    width: 100%;
-    height: 90px;
-
-    /* Positiion */
-    position: fixed;
-    bottom: 0;
-
-    /*! Debug */
-    background-color: rgb(223, 143, 143);
-}
+            /*! Debug */
+            background-color: rgb(223, 143, 143);
+        }
 
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
 
@@ -214,34 +227,46 @@ a:hover, .active {
     /**********************
         REGOLE GENERALI
     ***********************/
-    a.active::before {
-        display: none;
-    }
+        a.active::before {
+            display: none;
+        }
 
-    /** CONTAINER TOP MAIN LEFT */
-    #container-top-main-left {
-        width: 10%;
-        align-items: center;
-    }
+    /*************************
+        SEZIONI PRINCIPALI
+    **************************/
 
-    #container-top-main-left ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
+        /** CONTAINER TOP MAIN LEFT */
+            #container-top-main-left {
+                width: 10%;
+                align-items: center;
+            }
 
-    #img-logo-big, .text-nav-app, #playlist {
-        display: none;      
-    }
-    
-    .logo {
-        padding-left: 0;
-    }
-    
-    #img-logo-small {
-        display: block;
-    }
+            #container-top-main-left ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
 
-      
+            #img-logo-big, .text-nav-app, #playlist {
+                display: none;      
+            }
+            
+            .logo {
+                padding-left: 0;
+            }
+            
+            #img-logo-small {
+                display: block;
+            }
+
+        /** DOWNLOAD APP + USER */
+            #download-user {
+                width: 10%;
+                padding-left: 0;
+                text-align: center;
+            }
+            #text-download-app, #name-user {
+                display: none;
+            }
 }
 
 /************************************************************ BONUS ********************************************************************/
