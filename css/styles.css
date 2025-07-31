@@ -42,7 +42,7 @@ a:hover, .active {
     position: relative;
 }
 
-a.active::before {
+#nav-app a.active::before {
     content: ' ';
     background-color: rgb(13, 255, 0);
     width: 4px;
@@ -211,6 +211,13 @@ a.active::before {
         SEZIONI PRINCIPALI
     **************************/
 
+    /**********************
+        REGOLE GENERALI
+    ***********************/
+    a.active::before {
+        display: none;
+    }
+
     /** CONTAINER TOP MAIN LEFT */
     #container-top-main-left {
         width: 10%;
@@ -233,6 +240,7 @@ a.active::before {
     #img-logo-small {
         display: block;
     }
+
       
 }
 
