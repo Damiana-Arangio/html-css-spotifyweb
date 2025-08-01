@@ -11,7 +11,7 @@
     }
 
     html {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     body {
@@ -61,10 +61,11 @@
 
     /** CONTAINER TOP MAIN LEFT */
         #container-top-main-left {
-            width: 17%;
+            min-width: 199px;
             height: 100%;
             display: flex;
             flex-direction: column;
+            flex-wrap: nowrap;
             gap: 20px;
             background-color: rgb(0, 0, 0);
         }
@@ -89,7 +90,7 @@
             }
 
             #img-logo-small {
-                width: 30px;
+                width: 26px;
                 display: none;
             }
 
@@ -100,7 +101,7 @@
             }
 
             .img-nav-app {
-                width: 27px;
+                width: 23px;
                 vertical-align: middle;
             }
 
@@ -128,20 +129,21 @@
             }
 
             #img-playlist {
-                width: 50px;
+                width: 47px;
                 vertical-align: middle;
             }
 
         /** DOWNLOAD APP + USER */
             #download-user {
-                width: 13%;
+                min-width: 199px;
                 height: 70px;
                 padding-left: 15px;
+                padding-bottom: 80px;
                 background-color: black;
 
                 /* Position */
                 position: fixed;
-                bottom: 98px;                                   /* Spazio riservato ad height (90px) di container bottom main (fixed) per evitare sovrapposizionei + +8px extra per sollevare leggermente il blocco */
+                bottom: 90px;                                   /* Spazio riservato ad height (90px) di container bottom main (fixed) per evitare sovrapposizionei + +8px extra per sollevare leggermente il blocco */
             }
 
             #download-user > * {
@@ -258,7 +260,6 @@
                     display: flex;
                     flex-wrap: wrap;
                     gap: 12px;
-
                 }
 
                 .card-media {
@@ -269,7 +270,7 @@
                     background-color: palevioletred;
                 }
                 
-                #container-media section { 
+                #container-media section:not(#artisti-popolari) { 
                     width: 100%;
 
                     /*! Debug */
@@ -285,8 +286,14 @@
                     color: rgb(255, 255, 255,0.4);
                 }
 
+                #artisti-popolari {
+                    padding-bottom: 20px;
+
+                    /*! Debug */
+                    background-color: rgb(255, 98, 0);
+                }
+                               
                 #artisti-popolari .card-media {
-                    margin-bottom: 20px;
                     border-radius: 100%;
 
                     /*? Debug */
@@ -298,10 +305,6 @@
         #container-bottom-main {
             width: 100%;
             height: 90px;
-
-            /* Positiion */
-            position: fixed;
-            bottom: 0;
 
             /*! Debug */
             background-color: rgb(223, 143, 143);
@@ -346,13 +349,10 @@
 
 }
 
+/**************************************************** VERSIONE SMARTPHONE *************************************************************/
+
 /* todo VERSIONE SMARTPHONE - XS */
 @media screen and (max-width: 552px) {
-
-
-/*************************
-    SEZIONI PRINCIPALI
-**************************/
 
 /**********************
     REGOLE GENERALI
@@ -367,7 +367,7 @@
 
     /** CONTAINER TOP MAIN LEFT */
         #container-top-main-left {
-            width: 10%;
+            min-width: 39px;
             align-items: center;
         }
 
@@ -388,15 +388,30 @@
             display: block;
         }
 
-    /** DOWNLOAD APP + USER */
-        #download-user {
-            width: 8%;
-            padding-left: 0;
-            text-align: center;
-        }
-        #text-download-app, #name-user {
-            display: none;
-        }
+        /** DOWNLOAD APP + USER */
+            #download-user {
+                min-width: 39px;
+                padding-left: 0;
+                text-align: center;
+            }
+            #text-download-app, #name-user {
+                display: none;
+            }
+
+            /* separatore */
+                #hr-user {
+                    display: none;
+                }
+
+    /** CONTAINER TOP MAIN RIGHT */
+
+        /** SEZIONE MEDIA */
+
+            /* Nav Media */
+            #nav-media {
+                font-size: 0.9rem;
+            }
+
 }
 
 /************************************************************ BONUS ********************************************************************/
