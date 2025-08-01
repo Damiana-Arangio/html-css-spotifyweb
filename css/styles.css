@@ -143,7 +143,7 @@
 
                 /* Position */
                 position: fixed;
-                bottom: 90px;                                   /* Spazio riservato ad height (90px) di container bottom main (fixed) per evitare sovrapposizionei + +8px extra per sollevare leggermente il blocco */
+                bottom: 90px;                                   /* Spazio riservato ad height (90px) di container bottom main per evitare sovrapposizionei */
             }
 
             #download-user > * {
@@ -188,9 +188,6 @@
             height: 100%;
             overflow-y: auto;
             background-color: #141922;
-
-            /*! Debug */
-            /* background-color: green; */
         }
 
         /** CALL TO ACTION */
@@ -256,51 +253,48 @@
                 }
 
             /* MEDIA */
-                .flex-row {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 12px;
-                }
 
-                .card-media {
-                    flex-basis: calc((100% - 60px)/6);
+                /* Section media */
+                    .flex-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 12px;
+                    }
 
-                    /*! Debug */
-                    height: 100px;
-                    background-color: palevioletred;
-                }
-                
-                #container-media section:not(#artisti-popolari) { 
-                    width: 100%;
+                    .card-media {
+                        flex-basis: calc((100% - 60px)/6);
+                        text-align: center;
+                    }
 
-                    /*! Debug */
-                    background-color: rgb(0, 158, 150);
-                }
+                    .card-media img {
+                        max-width: 100%;
+                        margin-bottom: 8px;
+                    }
+                    
+                    #container-media section { 
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
 
-                .titolo-section-media {
-                    margin: 20px 0;
-                }
+                    .titolo-section-media {
+                        margin: 20px 0;
+                    }
 
-                .sottotitolo-section-media {
-                    padding-top: 5px;
-                    color: rgb(255, 255, 255,0.4);
-                }
+                    .sottotitolo-section-media {
+                        padding-top: 7px;
+                        color: rgb(255, 255, 255,0.4);
+                    }
 
-                #artisti-popolari {
-                    padding-bottom: 20px;
-
-                    /*! Debug */
-                    background-color: rgb(255, 98, 0);
-                }
-                               
-                #artisti-popolari .card-media {
-                    border-radius: 100%;
-
-                    /*? Debug */
-                    padding-top: 15%;           /* Height img */
-                }
-                
-
+                /* Section Artisti popolari */
+                    #artisti-popolari {
+                        padding-bottom: 20px;
+                        margin-top: 40px;
+                    }
+                                
+                    #artisti-popolari .card-media, #artisti-popolari img {
+                        border-radius: 100%;
+                    }
+                    
     /** PAGINA INFERIORE */
         #container-bottom-main {
             width: 100%;
