@@ -31,25 +31,12 @@
     a {
         text-decoration: none;
         color: white;
-        opacity: 0.7;
+        opacity: 0.4;
     }
 
 
     a:hover, .active, #hr-user {
         opacity: 1;
-    }
-
-    #nav-app {
-        position: relative;
-    }
-
-    #nav-app a.active::before {
-        content: ' ';
-        background-color: rgb(13, 255, 0);
-        width: 4px;
-        height: 20%;
-        position: absolute;
-        left: 0;
     }
 
     /** CONTENITORE PRINCIPALE PAGINA */
@@ -91,93 +78,106 @@
             padding-bottom: 15px;
         }
 
-    /** LOGO SPOTIFY */
-        .logo {
-            padding-left: 15px;
-            padding-top: 20px;
-        }
-
-        #img-logo-big {
-            width: 134px;
-        }
-
-        #img-logo-small {
-            width: 30px;
-            display: none;
-        }
-
-    /** NAVIGAZIONE APP */
-
-        #nav-page ul li, #playlist ul li {
-            height: 100%;
-            line-height: 100%;    
-        }
-
-        .img-nav-app {
-            width: 27px;
-            vertical-align: middle;
-        }
-
-
-    /** PLAYLIST */
-        #playlist {
-            flex-grow: 1;                    
-            overflow-y: auto;
-            padding-bottom: 70px;                           /* Spazio riservato ad  height di "Download App + User (fixed)" per evitare sovrapposizione */
-        }
-
-        #img-playlist {
-            width: 50px;
-            vertical-align: middle;
-        }
-
-    /** DOWNLOAD APP + USER */
-        #download-user {
-            width: 13%;
-            height: 70px;
-            padding-left: 15px;
-            background-color: black;
-
-            
-            /* Position */
-            position: fixed;
-            bottom: 98px;                                   /* Spazio riservato ad height (90px) di container bottom main (fixed) per evitare sovrapposizionei + +8px extra per sollevare leggermente il blocco */
-        }
-
-        #download-user > * {
-            margin-bottom: 10px;
-        }
-
-        #container-download-app, #container-user {
-            height: calc(70px/3); 
-            line-height: calc(70px/3);
-        }
-
-        /* Download App */
-            #circle-down {
-                padding-right: 5px;
+        /** LOGO SPOTIFY */
+            .logo {
+                padding-left: 15px;
+                padding-top: 20px;
             }
 
-        /* separatore */
-            #hr-user {
-                width: 89%;
-                height: 3%;
-                color: white;
-                opacity: 0.7;
-                border-style: solid;
+            #img-logo-big {
+                width: 134px;
             }
 
-        /* User */
-            #icon-user {
-                color: gray;
-                font-size: 2.0rem;
+            #img-logo-small {
+                width: 30px;
+                display: none;
+            }
+
+        /** NAVIGAZIONE APP */
+            #nav-page ul li, #playlist ul li {
+                height: 100%;
+                line-height: 100%;    
+            }
+
+            .img-nav-app {
+                width: 27px;
                 vertical-align: middle;
-                padding-right: 10px;
             }
 
-            #name-user {
-                font-size: 1.3rem;
+            #nav-app {
+                position: relative;
             }
+
+            #nav-app a.active::before {
+                content: ' ';
+                background-color: #ADFF2F;
+                width: 2px;
+                height: 20%;
+
+                /* Position barra verde*/
+                position: absolute;
+                left: 0;
+            }
+
+
+        /** PLAYLIST */
+            #playlist {
+                flex-grow: 1;                    
+                overflow-y: auto;
+                padding-bottom: 70px;                           /* Spazio riservato ad  height di "Download App + User (fixed)" per evitare sovrapposizione */
+            }
+
+            #img-playlist {
+                width: 50px;
+                vertical-align: middle;
+            }
+
+        /** DOWNLOAD APP + USER */
+            #download-user {
+                width: 13%;
+                height: 70px;
+                padding-left: 15px;
+                background-color: black;
+
+                /* Position */
+                position: fixed;
+                bottom: 98px;                                   /* Spazio riservato ad height (90px) di container bottom main (fixed) per evitare sovrapposizionei + +8px extra per sollevare leggermente il blocco */
+            }
+
+            #download-user > * {
+                margin-bottom: 10px;
+            }
+
+            #container-download-app, #container-user {
+                height: calc(70px/3); 
+                line-height: calc(70px/3);
+            }
+
+            /* Download App */
+                #circle-down {
+                    padding-right: 5px;
+                }
+
+            /* separatore */
+                #hr-user {
+                    width: 89%;
+                    height: 3%;
+                    color: white;
+                    opacity: 0.7;
+                    border-style: solid;
+                }
+
+            /* User */
+                #icon-user {
+                    color: gray;
+                    font-size: 2.0rem;
+                    vertical-align: middle;
+                    padding-right: 10px;
+                }
+
+                #name-user {
+                    font-size: 1.3rem;
+                }
 
 
     /** CONTAINER TOP MAIN RIGHT */
@@ -191,7 +191,7 @@
             /* background-color: green; */
         }
 
-        /* Sezione Call To Action */
+        /** CALL TO ACTION */
             #call-to-action {
                 width: 100%;
                 height: 100px;
@@ -220,10 +220,79 @@
                 height: 45px;
             }
 
-        /* Sezione Media */
+        /** SEZIONE MEDIA */
            #container-media {
-            padding-top: 100px;                                /* Spazio riservato a call-to-action (Fixed) */
+                padding: 100px 20px 0;                                /* Spazio riservato a call-to-action (Fixed) */
            }
+
+            /* Nav Media */
+                #nav-media {
+                    text-align: center;
+                }
+
+                #nav-media ul li {
+                    display: inline-block;
+                    padding: 0 20px;
+                    margin: 20px 0px;
+                }
+
+                #li-relative {
+                    position: relative;
+                }
+
+                #li-relative a.active::before {
+                    content: ' ';
+                    background-color: #ADFF2F;
+                    position: absolute;
+                    width: 29px;
+                    height: 2px;
+
+                    /* Position */
+                    position: absolute;
+                    top: 19px;
+                    right: 57px;
+                }
+
+            /* MEDIA */
+                .flex-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 12px;
+
+                }
+
+                .card-media {
+                    flex-basis: calc((100% - 60px)/6);
+
+                    /*! Debug */
+                    height: 100px;
+                    background-color: palevioletred;
+                }
+                
+                #container-media section { 
+                    width: 100%;
+
+                    /*! Debug */
+                    background-color: rgb(0, 158, 150);
+                }
+
+                .titolo-section-media {
+                    margin: 20px 0;
+                }
+
+                .sottotitolo-section-media {
+                    padding-top: 5px;
+                    color: rgb(255, 255, 255,0.4);
+                }
+
+                #artisti-popolari .card-media {
+                    margin-bottom: 20px;
+                    border-radius: 100%;
+
+                    /*? Debug */
+                    padding-top: 15%;           /* Height img */
+                }
+                
 
     /** PAGINA INFERIORE */
         #container-bottom-main {
@@ -241,13 +310,39 @@
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
 
 /* todo VERSIONE TABLET */
-@media screen and (max-width: 878px) {}
+@media screen and (max-width: 878px) {
+
+/*************************
+    SEZIONI PRINCIPALI
+**************************/
+
+    /** CONTAINER TOP MAIN RIGHT */
+
+        /** SEZIONE MEDIA */
+
+            /* MEDIA */
+                .card-media {
+                    flex-basis: calc((100% - 36px)/4);
+                }
+}
 
 /**************************************************** VERSIONE SMARTPHONE *************************************************************/
 
 /* todo VERSIONE SMARTPHONE - S */
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 640px) {
 
+/*************************
+    SEZIONI PRINCIPALI
+**************************/
+
+    /** CONTAINER TOP MAIN RIGHT */
+
+        /** SEZIONE MEDIA */
+
+        /* MEDIA */
+        .card-media {
+            flex-basis: calc((100% - 12px)/2);
+        }
 
 }
 
@@ -255,53 +350,53 @@
 @media screen and (max-width: 552px) {
 
 
-    /*************************
-        SEZIONI PRINCIPALI
-    **************************/
+/*************************
+    SEZIONI PRINCIPALI
+**************************/
 
-    /**********************
-        REGOLE GENERALI
-    ***********************/
-        a.active::before {
-            display: none;
+/**********************
+    REGOLE GENERALI
+***********************/
+    a.active::before {
+        display: none;
+    }
+
+/*************************
+    SEZIONI PRINCIPALI
+**************************/
+
+    /** CONTAINER TOP MAIN LEFT */
+        #container-top-main-left {
+            width: 10%;
+            align-items: center;
         }
 
-    /*************************
-        SEZIONI PRINCIPALI
-    **************************/
+        #container-top-main-left ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-        /** CONTAINER TOP MAIN LEFT */
-            #container-top-main-left {
-                width: 10%;
-                align-items: center;
-            }
+        #img-logo-big, .text-nav-app, #playlist {
+            display: none;      
+        }
+        
+        .logo {
+            padding-left: 0;
+        }
+        
+        #img-logo-small {
+            display: block;
+        }
 
-            #container-top-main-left ul {
-                list-style-type: none;
-                padding-left: 0;
-            }
-
-            #img-logo-big, .text-nav-app, #playlist {
-                display: none;      
-            }
-            
-            .logo {
-                padding-left: 0;
-            }
-            
-            #img-logo-small {
-                display: block;
-            }
-
-        /** DOWNLOAD APP + USER */
-            #download-user {
-                width: 8%;
-                padding-left: 0;
-                text-align: center;
-            }
-            #text-download-app, #name-user {
-                display: none;
-            }
+    /** DOWNLOAD APP + USER */
+        #download-user {
+            width: 8%;
+            padding-left: 0;
+            text-align: center;
+        }
+        #text-download-app, #name-user {
+            display: none;
+        }
 }
 
 /************************************************************ BONUS ********************************************************************/
