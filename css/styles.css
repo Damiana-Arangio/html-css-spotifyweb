@@ -219,7 +219,7 @@
                 height: 45px;
             }
 
-        /** SEZIONE MEDIA */
+        /** CONTENITORE SEZIONE MEDIA */
            #container-media {
                 padding: 100px 20px 0;                                /* Spazio riservato a call-to-action (Fixed) */
            }
@@ -249,7 +249,7 @@
                     /* Position */
                     position: absolute;
                     top: 19px;
-                    right: 57px;
+                    right: 48px;
                 }
 
             /* MEDIA */
@@ -263,12 +263,13 @@
 
                     .card-media {
                         flex-basis: calc((100% - 60px)/6);
-                        text-align: center;
                     }
 
                     .card-media img {
                         max-width: 100%;
                         margin-bottom: 8px;
+                        text-align: center;
+
                     }
                     
                     #container-media section { 
@@ -284,8 +285,30 @@
                         padding-top: 7px;
                         color: rgb(255, 255, 255,0.4);
                     }
+                    
+                /* Sezione Recently Played */
+                    .container-img {
+                        max-width: 100%;
+                        
+                        /* Position */
+                        position: relative;                         /* Relative per icon-play */
+                    }
 
-                /* Section Artisti popolari */
+                    .img-hover:hover {
+                        opacity: 0.5;
+                    }
+                    
+                    .icon-play {
+                        font-size: 3rem;
+                            
+                            /* Position */
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                    }
+
+                /* Section Artisti PIù popolari */
                     #artisti-popolari {
                         padding-bottom: 20px;
                         margin-top: 40px;
