@@ -201,7 +201,7 @@
                                 </div>
 
                                 <h2> Heavy Metal </h2>
-                                <h5 class="sottotitolo-section-media"> Subtitle </h5>
+                                <h5 class="sottotitolo-section-media text-gray-transparent "> Subtitle </h5>
                             </div>
 
                             <div class="card-media">
@@ -211,7 +211,7 @@
                                 </div>
 
                                 <h2> Stranger Things Vol.1 (a Netflix Original Series Soundtrack) </h2>
-                                <h5 class="sottotitolo-section-media"> Subtitle </h5>
+                                <h5 class="sottotitolo-section-media text-gray-transparent "> Subtitle </h5>
                             </div>
 
                             <div class="card-media">
@@ -221,7 +221,7 @@
                                 </div>         
 
                                 <h2>A quiet place</h2>
-                                <h5 class="sottotitolo-section-media"> Subtitle </h5>
+                                <h5 class="sottotitolo-section-media text-gray-transparent "> Subtitle </h5>
                             </div>
 
                             <div class="card-media">
@@ -231,7 +231,7 @@
                                 </div>         
 
                                 <h2>Split</h2>
-                                <h5 class="sottotitolo-section-media"> Subtitle </h5>
+                                <h5 class="sottotitolo-section-media text-gray-transparent "> Subtitle </h5>
                             </div>
 
                             <div class="card-media">
@@ -241,7 +241,7 @@
                                 </div>
                                                                 
                                 <h2>A cure for wellness</h2>
-                                <h5 class="sottotitolo-section-media"> Subtitle </h5>
+                                <h5 class="sottotitolo-section-media text-gray-transparent "> Subtitle </h5>
                             </div>
 
                             <div class="card-media">
@@ -250,7 +250,7 @@
                                     <i class="fa-regular fa-circle-play icon-play"></i>
                                 </div>                                
                                 <h2>Sinister</h2>
-                                <h5 class="sottotitolo-section-media"> Subtitle </h5>
+                                <h5 class="sottotitolo-section-media text-gray-transparent "> Subtitle </h5>
                             </div>
                         </div>
                     </section>
@@ -261,7 +261,7 @@
                         <!-- Titolo -->
                         <div class="titolo-section-media">
                             <h2> Creato per John Doe </h2>
-                            <h5 class="sottotitolo-section-media"> Più ascolti, più accurati saranno i suggerimenti </h5>                        
+                            <h5 class="sottotitolo-section-media text-gray-transparent "> Più ascolti, più accurati saranno i suggerimenti </h5>                        
                         </div>
 
                         <!-- Righe -->
@@ -286,7 +286,7 @@
                         <!-- Titolo -->
                         <div class="titolo-section-media">
                             <h2> Artisti più popolari </h2>
-                            <h5 class="sottotitolo-section-media"> Più ascolti, più accurati saranno i suggerimenti </h5>
+                            <h5 class="sottotitolo-section-media text-gray-transparent "> Più ascolti, più accurati saranno i suggerimenti </h5>
                         </div>
                     
                         <!-- Righe -->
@@ -303,15 +303,81 @@
                                 <h2> Ludovico Einaudi </h2>
                             </div>                     
                         </div>
-                        
                     </section>
                 </div>
         </div>
         
     </main>
 
-    <!-- CONTENITORE INFERIORE PAGINA -->
-    <div id="container-bottom-main"> container bottom main </div>
+    <!-- CONTAINER BOTTOM MAIN-->
+    <div id="container-bottom-main">
+
+        <!-- PLAYER LEFT -->
+        <div id="player-left">
+        
+            <!-- Info Brano -->
+            <img src="img/sinister.jpeg" alt="sinister">
+            <div id="container-titolo-player-left">
+                <h4> Sinister </h4>
+                <h5 class="text-gray-transparent"> <a href="#"> Brano <span id="nome"> Nome </span> </a> </h5>
+            </div>
+            <div id="icon-player-left">
+                <i class="fa-regular fa-heart text-gray-transparent" id="icon-left"></i>
+                <br>
+                <i class="fa-regular fa-folder text-gray-transparent"></i>
+            </div>
+        </div>
+
+        <!-- PLAYER CENTER -->
+        <div id="player-center">
+
+            <!-- Controlli Player -->
+            <div id="player-controls">
+                <ul>
+                    <li> <i class="fa-solid fa-shuffle fa-2xs"></i> </li>
+                    <li> <i class="fa-solid fa-backward-step fa-2xs"></i> </li>
+                    <li> <i class="fa-solid fa-circle-play fa-lg" id="icon-play"> </i> </li>
+                    <li> <i class="fa-solid fa-backward-step fa-rotate-180 fa-2xs"></i> </li>
+                    <li> <i class="fa-solid fa-rotate-right fa-2xs"> </i> </li>
+                </ul>
+            </div>
+            
+            <!-- Barra di Riproduzione -->
+            <div id="player-progress"> 
+
+                <!-- Tempo iniziale -->
+                <span class="time"> 0:24 </span>
+
+                <!-- Barra di avanzamento -->
+                <div class="progress-bar"> 
+                    <div id="progress-time"></div>
+                    <div id="progress-thumb"></div>
+                </div>
+
+                <!-- Tempo iniziale -->
+                <span class="time"> 4:35 </span>
+            </div>
+
+        </div>
+
+        <!-- PLAYER RIGHT -->
+        <div id="player-right">
+            <!-- Coda - Volume - Dispositivi -->
+            <ul>
+                <li> <i class="fa-solid fa-list"></i> </li>
+                <li> <i class="fa-solid fa-desktop"></i></li>
+                <li> <i class="fa-solid fa-volume-high"></i> </li>
+                <li id="volume-bar">
+                    <div id="progress-volume"></div>
+                    <div id="progress-thumb-volume"></div>
+                </li>
+
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
 
 </body>
 

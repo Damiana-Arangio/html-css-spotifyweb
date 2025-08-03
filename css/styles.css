@@ -21,6 +21,7 @@
         font-weight: bold;
         color: white;
         overflow: hidden;                                   /* Blocca scroll pagina */
+        background-color: #282828;
     }
 
     h3 {
@@ -44,9 +45,6 @@
             width: 100%;
             height: calc(100vh - 90px);
             display: flex;
-
-            /*! Debug */
-            background-color: rgb(241, 26, 241);
         }
 
 
@@ -54,6 +52,10 @@
     CLASSI RIUTILIZZABILI
 ***************************/
 
+    /** COLORI TESTI */
+        .text-gray-transparent, #progress-bar {
+            color: rgb(255, 255, 255, 0.4);
+        }
 
 /*************************
     SEZIONI PRINCIPALI
@@ -143,7 +145,7 @@
 
                 /* Position */
                 position: fixed;
-                bottom: 90px;                                   /* Spazio riservato ad height (90px) di container bottom main per evitare sovrapposizionei */
+                bottom: 100px;                                   /* Spazio riservato ad height (100px) di container bottom main per evitare sovrapposizionei */
             }
 
             #download-user > * {
@@ -242,7 +244,6 @@
                 #li-relative a.active::before {
                     content: ' ';
                     background-color: #ADFF2F;
-                    position: absolute;
                     width: 29px;
                     height: 2px;
 
@@ -283,7 +284,6 @@
 
                     .sottotitolo-section-media {
                         padding-top: 7px;
-                        color: rgb(255, 255, 255,0.4);
                     }
                     
                 /* Sezione Recently Played */
@@ -318,14 +318,193 @@
                         border-radius: 100%;
                     }
                     
-    /** PAGINA INFERIORE */
+    /** CONTAINER BOTTOM MAIN */
         #container-bottom-main {
             width: 100%;
-            height: 90px;
+            height: 100px;
+            padding: 0 5px;
 
-            /*! Debug */
-            background-color: rgb(223, 143, 143);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
         }
+
+        /** PLAYER LEFT */
+        #player-left {
+            height: 50%;
+            line-height: 50%;
+            padding-left: 5px;
+        }
+        
+            /* Info Brano */
+                #player-left img {
+                    width: 50px;
+                }
+                
+                #container-titolo-player-left h4{
+                    padding-bottom: 3px;
+                }
+
+                #player-left img, #container-titolo-player-left, #icon-player-left  {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                #container-titolo-player-left, #icon-player-left i:nth-child(2) {
+                    padding-left: 5px; 
+                }
+
+
+                #icon-player-left {
+                    padding-left: 15px;
+                }
+
+                #icon-left {
+                    padding-right: 8px;
+                }
+
+                #player-left a:hover {
+                    text-decoration: underline;
+                }
+
+                #player-left i:hover {
+                    color: rgb(255, 255, 255, 1);                
+                }
+
+                br {
+                    display: none;
+                }
+                
+        /** PLAYER CENTER */
+        #player-center{
+            text-align: center;
+        }
+            /* Controlli Player */
+                #player-controls li {
+                    display: inline-block;
+                    list-style-type: none;
+                    font-size: 2rem;
+                    padding: 10px;
+                }
+
+                #icon-play {
+                    font-size: 3rem;
+                }
+
+                #icon-play:hover {
+                    font-size: 3.1rem;
+                }
+
+            /* Barra di Riproduzione */
+                .progress-bar {
+                    min-width: 350px;
+                    display: inline-block;
+                    border: 3px solid rgb(167, 167, 167);
+                    border-radius: 2px;
+                    margin: 0 20px;
+
+                    /* Position */
+                    position: relative;
+                }
+
+                #progress-time {
+                    content: ' ';
+                    background-color: white;
+                    width: 70px;
+                    height: 4px;
+                
+                    /* Position */
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transform: translate(-4%, 50%);
+                }
+
+                .progress-bar:hover #progress-time {
+                    background-color: #ADFF2F;
+                }
+                
+                #progress-thumb {
+                    display: none;
+                }
+
+                .progress-bar:hover #progress-thumb {
+                    display: inline-block;
+                }
+
+                #progress-thumb {
+                    max-width: 10px;
+                    height: 10px;
+                    border: 5px solid white;
+                    border-radius: 100%;
+
+                    /* Position */
+                        position: absolute;
+                        left: 59px;
+                        bottom: 0;
+                        transform: translate(50%, 50%);
+                }
+
+        /** PLAYER RIGHT */ 
+            #player-right {
+                margin-right: 10px;
+            }
+
+            #player-right li {
+                list-style-type: none;
+                display: inline-block;
+                padding-right: 5px;
+                line-height: 50%;
+                vertical-align: middle;
+            }
+
+            #volume-bar {
+                border: 3px solid rgb(167, 167, 167);
+                border-radius: 2px;
+                min-width: 100px;
+
+                /* Position */
+                Position: relative;
+            }
+
+            #progress-volume {
+                content: ' ';
+                background-color: white;
+                width: 30px;
+                height: 4px;
+
+                /* Position */
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: translate(-10%, 50%);
+            }
+
+            #progress-thumb-volume {
+                display: none;
+            }
+
+            #volume-bar:hover #progress-volume{
+                background-color: #ADFF2F;
+            }
+
+            #volume-bar:hover #progress-thumb-volume {
+                display: inline-block;
+            }
+                        
+            #progress-thumb-volume {
+                max-width: 10px;
+                height: 10px;
+                border: 5px solid white;
+                border-radius: 100%;
+
+                /* Position */
+                position: absolute;
+                left: 22px;
+                bottom: 0;
+                transform: translate(50%, 50%);
+            }
 
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
 
@@ -344,9 +523,25 @@
                 .card-media {
                     flex-basis: calc((100% - 36px)/4);
                 }
+
+    /** CONTAINER BOTTOM MAIN */
+
+        /** PLAYER LEFT */
+        
+        #icon-player-left {
+            padding-left: 1px;
+        }
+            
+                       
+        /** PLAYER CENTER */
+       
+            /* Barra di Riproduzione */
+                .progress-bar {
+                    min-width: 190px;
+                }
 }
 
-/**************************************************** VERSIONE SMARTPHONE *************************************************************/
+/**************************************************** VERSIONE SMARTPHONE S *************************************************************/
 
 /* todo VERSIONE SMARTPHONE - S */
 @media screen and (max-width: 640px) {
@@ -364,9 +559,35 @@
             flex-basis: calc((100% - 12px)/2);
         }
 
+    /** CONTAINER BOTTOM MAIN */
+
+        /** PLAYER LEFT */
+            /* Info Brano */
+            #icon-left {
+                padding-right: 3px;
+            }
+
+        /** PLAYER CENTER */
+            /* Controlli Player */
+                #icon-play {
+                    font-size: 2.3rem;
+                }
+
+                #player-controls li {
+                    padding: 5px;
+                }
+
+                /* Barra di Riproduzione */
+                .progress-bar, #player-controls {
+                    min-width: 110px;
+                }
+
+                .progress-bar {
+                    margin: 0 7px;
+                }
 }
 
-/**************************************************** VERSIONE SMARTPHONE *************************************************************/
+/**************************************************** VERSIONE SMARTPHONE XS *************************************************************/
 
 /* todo VERSIONE SMARTPHONE - XS */
 @media screen and (max-width: 552px) {
@@ -386,11 +607,6 @@
         #container-top-main-left {
             min-width: 39px;
             align-items: center;
-        }
-
-        #container-top-main-left ul {
-            list-style-type: none;
-            padding-left: 0;
         }
 
         #img-logo-big, .text-nav-app, #playlist {
@@ -429,6 +645,44 @@
                 font-size: 0.9rem;
             }
 
+    /** CONTAINER BOTTOM MAIN */
+            
+        /** PLAYER LEFT */
+
+            /* Info Brano */
+                br {
+                    display: block;
+                }
+
+                #nome {
+                    display: block;
+                    padding-top: 3px;
+                }
+
+                #container-titolo-player-left h4 {
+                    padding-bottom: 6px;
+                }
+
+                #icon-player-left {
+                    padding-left: 7px;
+                }
+
+        /** PLAYER CENTER */
+        
+            /* Barra di Riproduzione */
+            
+            #player-progress {
+                font-size: 0.9rem;
+            }
+
+            .progress-bar {
+                    min-width: 77px;
+            }
+        
+            .progress-bar {
+                margin: 0 7px;
+            }
+                                
 }
 
 /************************************************************ BONUS ********************************************************************/
