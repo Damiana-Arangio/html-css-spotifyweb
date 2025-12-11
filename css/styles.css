@@ -508,7 +508,6 @@
 
 /*****************************************************  VERSIONE TABLET  ***************************************************************/
 
-/* todo VERSIONE TABLET */
 @media screen and (max-width: 878px) {
 
 /*************************
@@ -543,7 +542,6 @@
 
 /**************************************************** VERSIONE SMARTPHONE S *************************************************************/
 
-/* todo VERSIONE SMARTPHONE - S */
 @media screen and (max-width: 640px) {
 
 /*************************
@@ -589,7 +587,6 @@
 
 /**************************************************** VERSIONE SMARTPHONE XS *************************************************************/
 
-/* todo VERSIONE SMARTPHONE - XS */
 @media screen and (max-width: 552px) {
 
 /**********************
@@ -607,6 +604,21 @@
         #container-top-main-left {
             min-width: 39px;
             align-items: center;
+        }
+
+        #container-top-main-left ul {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        #container-top-main-left li {
+            padding-bottom: 15px;
+        }
+
+        .img-nav-app {
+            display: block;
+            margin: 0 auto;
+            /* icone perfettamente centrate nel menu verticale */
         }
 
         #img-logo-big, .text-nav-app, #playlist {
@@ -686,7 +698,8 @@
 }
 
 /************************************************************ BONUS ********************************************************************/
-/* todo Media Query - Height Viewport ridotta  */
+
+/* Media Query - Height Viewport ridotta  */
 @media screen and (max-height: 350px) {
    
 }
