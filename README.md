@@ -1,29 +1,32 @@
+<p align="center">
+  <img src="img/boolean-logo.png" alt="Boolean logo" width="35">
+</p>
+
 <h1 align="center">Spotify Web</h1>
 
-<p align="center">
-  Esercizio svolto durante il corso Boolean per esercitarmi nella riproduzione statica di una schermata in stile Spotify Web con HTML e CSS.
-</p>
+Pagina HTML/CSS che riproduce una schermata in stile Spotify Web,
+con layout a web app composto da sidebar di navigazione, area principale e player inferiore fisso.
 
 ## Obiettivo
 
-- Riprodurre una schermata ispirata a Spotify Web.
+- Riprodurre una schermata ispirata a Spotify Web
 - Creare un layout tipo web app con:
-  - sidebar di navigazione,
-  - area principale con le sezioni di contenuto,
-  - player ancorato in basso.
-- Rendere il layout responsive per:
-  - desktop,
-  - desktop con altezza ridotta (~388px),
-  - tablet,
-  - mobile (smartphone S),
-  - mobile (smartphone XS).
+  - sidebar di navigazione sempre visibile
+  - area principale con le sezioni di contenuto
+  - player ancorato in basso alla finestra
+- Rendere il layout adattabile a più contesti:
+  - desktop
+  - desktop con altezza ridotta (~388px)
+  - tablet
+  - mobile (smartphone S)
+  - mobile (smartphone XS)
 
 ## Anteprima
 
 ### Desktop
 ![Anteprima desktop](img/screen-desktop.png)
 
-### Desktop – altezza 388px
+### Desktop – altezza ridotta
 ![Anteprima desktop altezza ridotta](img/screen-height-388.png)
 
 ### Tablet
@@ -35,8 +38,7 @@
 ### Mobile XS
 ![Anteprima mobile XS](img/screen-smart-xs.png)
 
-
 ## Tecnologie utilizzate
 
-- HTML  
-- CSS
+- HTML5  
+- CSS3
